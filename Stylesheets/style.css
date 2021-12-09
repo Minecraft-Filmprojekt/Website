@@ -16,15 +16,16 @@ p {
 }
 
 .navBar {
-	background-color: #BBDE60;
+	background-color: #BBDE60 ;
 	position: fixed;
 	border-top-left-radius: 15px;
 	width: 100%;
 	display: table-cell;
-    vertical-align: middle;
+        vertical-align: middle;
 	top: 0;
 	left: 0;
 	display: inline-block;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .navBar p {
 	float: left;
@@ -158,14 +159,15 @@ p {
 	align-items: center;
 }
 .dropDownItem {
-	position: unset;
-	height: 30px;
-	background-color: lightgrey;
+	opacity: 0%;
 	display: none;
+	height: 30px;
+	background-color: lightgray;
 	border-style: solid;
 	border-width: 1px;
 	border: none;
-	border-top: solid;
+        border-top: solid;
+        box-shadow: rgba(0, 0, 0, 0.10) 0px 10px 20px, rgba(0, 0, 0, 0.15) 0px 6px 6px;
 }
 
 /*#scrollIndiBack {
