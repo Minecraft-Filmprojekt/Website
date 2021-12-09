@@ -42,37 +42,39 @@ function checkScroll() {
 	searchEl.style.transition = "height 0.2s linear 0s";
 	satisImg.style.transition = "height 0.2s linear 0s";
 	toTop.style.transition = "opacity 0.3s linear 0s";
-//Ã¼berschreibt sich das? \/ !!!
+	scrollIndiFore.style.transition = "height 0.2s linear 0s";
+	scrollIndiBack.style.transition = "height 0.2s linear 0s, width 0.1s linear 0s";
+//überschreibt sich das? \/ !!!
 	
 //	scrollIndiFore.style.transition = "margin 0.2s linear 0s";
 //	scrollIndiBack.style.transition = "margin 0.2s linear 0s";
 	scrollIndiBack.style.transition = "width 0.1s linear 0s";
 	
 	if (window.overflowY > 30) {
-		searchEl.style.height = '60px';
-		satisImg.style.height = '60px';
+		searchEl.style.height = '40px';
+		satisImg.style.height = '40px';
 		toTop.style.opacity = '100%';
-		toTop.style.visibility = 'visible';
-//		scrollIndiFore.style.marginTop = '65px';
-//		scrollIndiBack.style.marginTop = '65px';
+		toTop.style.pointerEvents = 'auto';
+		scrollIndiFore.style.height = '40px';
+		scrollIndiBack.style.height = '40px';
 		for (i=0;i<dropDownTi.length;i++) {
 			dropDownTi[i].style.transition = "height 0.2s linear 0s";
-			dropDownTi[i].style.height = '60px';
+			dropDownTi[i].style.height = '40px';
 		}
 	} else {
 		searchEl.style.height = '80px';
 		satisImg.style.height = '80px';
 		toTop.style.opacity = '0%';
-		toTop.style.visibility = 'hidden';
-//		scrollIndiFore.style.marginTop = '85px';
-//		scrollIndiBack.style.marginTop = '85px';
+		toTop.style.pointerEvents = 'none';
+		scrollIndiFore.style.height = '80px';
+		scrollIndiBack.style.height = '80px';
 		for (i=0;i<dropDownTi.length;i++) {
 			dropDownTi[i].style.transition = "height 0.2s linear 0s";
 			dropDownTi[i].style.height = '80px';
 		}
 	}
 	
-//	scrollIndiBack.style.width = window.toTop + "px";
+	scrollIndiBack.style.width = window.toTop + "px";
 
 }
 
