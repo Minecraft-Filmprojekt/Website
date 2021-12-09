@@ -48,8 +48,10 @@ function checkScroll() {
 //	scrollIndiFore.style.transition = "margin 0.2s linear 0s";
 //	scrollIndiBack.style.transition = "margin 0.2s linear 0s";
 	scrollIndiBack.style.transition = "width 0.1s linear 0s";
+	alert(window.overflowY);
 	
 	if (window.overflowY > 30) {
+		alert(1);
 		searchEl.style.height = '40px';
 		satisImg.style.height = '40px';
 		toTop.style.opacity = '100%';
@@ -159,13 +161,10 @@ function scrTo(x,y) {
 }
 
 function bodyClick(e) {
-	alert(1);
 	document.getElementById('searchInput').style.transition = "box-shadow 0.1s linear 0s";
 	if (e.target.id == "searchInput") {
-		alert(2);
 		document.getElementById('searchInput').style.boxShadow = '0 0 3px gray';
 	} else {
-		alert(3);
 		document.getElementById('searchInput').style.boxShadow = 'none';
 	}
 }
