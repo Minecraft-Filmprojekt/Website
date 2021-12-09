@@ -48,10 +48,8 @@ function checkScroll() {
 //	scrollIndiFore.style.transition = "margin 0.2s linear 0s";
 //	scrollIndiBack.style.transition = "margin 0.2s linear 0s";
 	scrollIndiBack.style.transition = "width 0.1s linear 0s";
-	alert(window.overflowY);
 	
-	if (window.overflowY > 30) {
-		alert(1);
+	if (window.pageYOffset > 30) {
 		searchEl.style.height = '40px';
 		satisImg.style.height = '40px';
 		toTop.style.opacity = '100%';
