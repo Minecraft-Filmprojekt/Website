@@ -159,10 +159,13 @@ function scrTo(x,y) {
 }
 
 function bodyClick(e) {
+	alert(1);
 	document.getElementById('searchInput').style.transition = "box-shadow 0.1s linear 0s";
 	if (e.target.id == "searchInput") {
+		alert(2);
 		document.getElementById('searchInput').style.boxShadow = '0 0 3px gray';
 	} else {
+		alert(3);
 		document.getElementById('searchInput').style.boxShadow = 'none';
 	}
 }
