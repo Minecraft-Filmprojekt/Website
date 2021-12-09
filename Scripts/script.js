@@ -73,7 +73,7 @@ function checkScroll() {
 		}
 	}
 	
-	scrollIndiBack.style.width = window.toTop + "px";
+	scrollIndiBack.style.width = window.pageYOffset + "px";
 
 }
 
