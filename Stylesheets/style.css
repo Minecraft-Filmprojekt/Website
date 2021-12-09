@@ -100,8 +100,8 @@ p {
 	text-align: center;
 	padding: 2px;
 	padding-bottom: 0px;
-	opacity: 0%;
-	//visibility: hidden;
+	opacity: 100%;
+	/*visibility: hidden;*/
 }
 
 /*auf Jimdo raus!!!*/.content {
