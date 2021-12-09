@@ -109,7 +109,7 @@ function search(e) {
 		}
 		
 		if (!(keyword === "") & !(keyword === " ")) {
-			var request = new XMLHttpRequest();
+	/*	var request = new XMLHttpRequest();
 	      	request.open("POST", "https://discord.com/api/webhooks/812075663669461023/AtuJ3BaWd6enu_WSbyjtmxLuMREMIBAmxKyr-GnbhCw4NbOc3TVHAtrdQTWbsJheT0MX");
 	
 	      	request.setRequestHeader('Content-type', 'application/json');
@@ -121,7 +121,7 @@ function search(e) {
 						+ ul.innerText
 	      	}
 	
-	     	 request.send(JSON.stringify(params));
+	     	 request.send(JSON.stringify(params));*/
 		}
 		
 		window.scrollTo(0,1710);
@@ -134,23 +134,36 @@ function scrollUp() {
 }
 
 function dropDown(x) {
-	x.children[0].style.transition = "background 0.15s linear 0s";
+	x.children[0].style.transition = "background 0.1s linear 0s";
 	x.children[0].style.background = '#96D532';
 	var liList = x.getElementsByTagName('li');
 	for (i=1;i<liList.length;i++) {
-		liList[i].style.display = 'block';
+		liList[i].style.transition = "opacity 1s linear 0s"
+		liList[i].style.opacity = '100%';
+		liList[i].style.display = 'block'
 	}
 }
 
 function dropUp(x) {
-	x.children[0].style.transition = "background 0.15s linear 0s";
-	x.children[0].style.background = 'none';
+	x.children[0].style.transition = "background 0.1s linear 0s";
+	x.children[0].style.background = 'rgba(102,204,0,0.75)';
 	var liList = x.getElementsByTagName('li');
 	for (i=1;i<liList.length;i++) {
-		liList[i].style.display = 'none';
+		liList[i].style.transition = "opacity 1s linear 0s"
+		liList[i].style.opacity = '0%';
+		liList[i].style.display = 'none'
 	}
 }
 
 function scrTo(x,y) {
 	window.scrollTo(x,y);
+}
+
+function bodyClick(e) {
+	document.getElementById('searchInput').style.transition = "box-shadow 0.1s linear 0s";
+	if (e.target.id == "searchInput") {
+		document.getElementById('searchInput').style.boxShadow = '0 0 3px gray';
+	} else {
+		document.getElementById('searchInput').style.boxShadow = 'none';
+	}
 }
