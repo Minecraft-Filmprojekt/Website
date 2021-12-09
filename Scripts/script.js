@@ -73,7 +73,8 @@ function checkScroll() {
 		}
 	}
 	
-	scrollIndiBack.style.width = window.pageYOffset + "px";
+	let maxHeight = 1650;
+	scrollIndiBack.style.width = (window.pageYOffset/maxHeight) * scrollIndiFore.style.width.split("p")[0] + "px";
 
 }
 
