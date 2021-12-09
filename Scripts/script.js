@@ -1,5 +1,4 @@
 window.addEventListener('load',function load() {
-	document.getElementById('scrollDiv').style.height = window.innerHeight /*-55*/ + "px";
 	document.getElementById('Stream_SpielbaerLP').style.width = window.innerWidth * 0.7 + "px";
 	document.getElementById('Stream_SpielbaerLP').style.height = document.getElementById('Stream_SpielbaerLP').style.width.split("p")[0] / 620 * 378 + document.getElementById('SpielbaerLPchat_embed').style.borderWidth + "px";
 	document.getElementById('SpielbaerLPchat_embed').style.width = window.innerWidth - document.getElementById('Stream_SpielbaerLP').style.width.split("p")[0] - 120 + "px";
@@ -44,7 +43,7 @@ function checkScroll() {
 	toTop.style.transition = "opacity 0.3s linear 0s";
 	scrollIndiFore.style.transition = "height 0.2s linear 0s";
 	scrollIndiBack.style.transition = "height 0.2s linear 0s, width 0.1s linear 0s";
-//überschreibt sich das? \/ !!!
+//Ã¼berschreibt sich das? \/ !!!
 	
 //	scrollIndiFore.style.transition = "margin 0.2s linear 0s";
 //	scrollIndiBack.style.transition = "margin 0.2s linear 0s";
