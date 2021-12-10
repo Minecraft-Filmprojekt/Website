@@ -12,23 +12,13 @@ function openLink(adress) {
 }
 
 function getBlue(x) {
-	x.style.color = "white";
-	
 	x.style.transition = "background 0.2s linear 0s";
 	x.style.background = '#1c86ee';
-/*	if (x.id === "searchTrigger" && document.documentElement.scrollTop > 30) {
-		document.getElementById('search').style.height = '80px';
-	}*/
 }
 
 function getNotBlue(x) {
-	x.style.color = "black";
-	
 	x.style.transition = "background 0.2s linear 0s";
 	x.style.background = '';
-/*	if (x.id === "searchTrigger" && getElementById('scrollDiv').scrollTop > 30) {
-		document.getElementById('search').style.height = '60px';
-	}*/
 }
 
 function checkScroll() {
