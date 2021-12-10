@@ -12,12 +12,12 @@ function openLink(adress) {
 }
 
 function getBlue(x) {
-	x.style.transition = "background 0.2s linear 0s";
+	x.style.transition = "background 0.15s linear 0s";
 	x.style.background = '#1c86ee';
 }
 
 function getNotBlue(x) {
-	x.style.transition = "background 0.2s linear 0s";
+	x.style.transition = "background 0.15s linear 0s";
 	x.style.background = '';
 }
 
