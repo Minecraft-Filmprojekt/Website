@@ -13,7 +13,7 @@ function openLink(adress) {
 
 function getBlue(x) {
 	x.style.transition = "background 0.15s linear 0s";
-	x.style.background = '#1c86ee';
+	x.style.background = '#1c86ee'
 }
 
 function getNotBlue(x) {
@@ -23,24 +23,29 @@ function getNotBlue(x) {
 
 function checkScroll() {
 	var searchEl = document.getElementById('search');
+	var searchInput = document.getElementById('searchInput');
 	var satisImg = document.getElementById('satisImg');
 	var toTop = document.getElementById('toTop');
+	var toBottom = document.getElementById('toBottom');
 	var dropDownTi = document.getElementsByClassName('dropDownTitle');
 	var scrollIndiFore = document.getElementById('scrollIndiFore');
 	var scrollIndiBack = document.getElementById('scrollIndiBack');
+	var disclaimer = document.getElementsByClassName('disclaimer');
 	searchEl.style.transition = "height 0.2s linear 0s";
+	searchInput.style.transition = "height 0.2s linear 0s";
 	satisImg.style.transition = "height 0.2s linear 0s";
 	toTop.style.transition = "opacity 0.3s linear 0s";
+	toBottom.style.transition = "opacity 0.3s linear 0s";
 	scrollIndiFore.style.transition = "height 0.2s linear 0s";
 	scrollIndiBack.style.transition = "height 0.2s linear 0s, width 0.1s linear 0s";
-//Ã¼berschreibt sich das? \/ !!!
+//überschreibt sich das? \/ !!!
 	
 //	scrollIndiFore.style.transition = "margin 0.2s linear 0s";
 //	scrollIndiBack.style.transition = "margin 0.2s linear 0s";
 //	scrollIndiBack.style.transition = "width 0.1s linear 0s";
-	
 	if (window.pageYOffset > 30) {
 		searchEl.style.height = '40px';
+		searchInput.style.height = '21px';
 		satisImg.style.height = '40px';
 		toTop.style.opacity = '100%';
 		toTop.style.pointerEvents = 'auto';
@@ -52,6 +57,7 @@ function checkScroll() {
 		}
 	} else {
 		searchEl.style.height = '80px';
+		searchInput.style.height = '26px';
 		satisImg.style.height = '80px';
 		toTop.style.opacity = '0%';
 		toTop.style.pointerEvents = 'none';
@@ -62,7 +68,14 @@ function checkScroll() {
 			dropDownTi[i].style.height = '80px';
 		}
 	}
-	
+	if (window.scrollY < (window.scrollMaxY - 30)) {
+		toBottom.style.opacity = '100%';
+		toBottom.style.pointerEvents = 'auto';
+	} else {
+		toBottom.style.opacity = '0%';
+		toBottom.style.pointerEvents = 'none';
+	}
+
 	scrollIndiBack.style.width = (window.scrollY/window.scrollMaxY) * scrollIndiFore.style.width.split("p")[0] + "px";
 
 }
@@ -120,6 +133,10 @@ function search(e) {
 function scrollUp() {
 	//html.style.transition = "scroll-behavior 1s smooth 0s";
 	window.scrollTo(0,0);
+}
+function scrollDown() {
+	//html.style.transition = "scroll-behavior 1s smooth 0s";
+	window.scrollTo(0,window.scrollMaxY);
 }
 
 function dropDown(x) {
