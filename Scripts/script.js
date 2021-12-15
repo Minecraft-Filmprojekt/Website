@@ -169,9 +169,9 @@ function scrTo(x,y) {
 	window.scrollTo(x,y);
 }
 
-function searchInpFocus(in) {
+function searchInpFoc(isIn) {
 	document.getElementById('searchInput').style.transition = "box-shadow 0.1s linear 0s";
-	if (in) {
+	if (isIn) {
 		document.getElementById('searchInput').style.boxShadow = '0 0 3px gray';
 	} else {
 		document.getElementById('searchInput').style.boxShadow = 'none';
