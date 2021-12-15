@@ -36,7 +36,7 @@
 				<label onclick="search('none')">
 					<a id="searchTrigger" class="blueButton" class="notSearch" onmouseover="getBlue(this)" onmouseout="getNotBlue(this)">Suchen</a>
 				</label>
-				<input id="searchInput" on placeholder="Suchbegriff"></input>
+				<input id="searchInput" onfocusin="searchInpFoc(true)" onfocusout="searchInpFoc(false)" placeholder="Suchbegriff"></input>
 			</div>
 		</header>
 		<br>
