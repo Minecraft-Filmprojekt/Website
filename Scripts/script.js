@@ -38,7 +38,7 @@ function checkScroll() {
 	toBottom.style.transition = "opacity 0.3s linear 0s";
 	scrollIndiFore.style.transition = "height 0.2s linear 0s";
 	scrollIndiBack.style.transition = "height 0.2s linear 0s, width 0.1s linear 0s";
-//überschreibt sich das? \/ !!!
+//Ã¼berschreibt sich das? \/ !!!
 	
 //	scrollIndiFore.style.transition = "margin 0.2s linear 0s";
 //	scrollIndiBack.style.transition = "margin 0.2s linear 0s";
@@ -165,9 +165,13 @@ function scrTo(x,y) {
 	window.scrollTo(x,y);
 }
 
-function bodyClick(e) {
+function scrTo(x,y) {
+	window.scrollTo(x,y);
+}
+
+function searchInpFocus(e,in) {
 	document.getElementById('searchInput').style.transition = "box-shadow 0.1s linear 0s";
-	if (e.target.id == "searchInput") {
+	if (in) {
 		document.getElementById('searchInput').style.boxShadow = '0 0 3px gray';
 	} else {
 		document.getElementById('searchInput').style.boxShadow = 'none';
