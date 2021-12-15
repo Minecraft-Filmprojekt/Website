@@ -105,7 +105,7 @@ function search(e) {
 		}
 		
 		if(ul.innerHTML === "" && keyword === "" || keyword === " ") {
-			ul.innerText = "Bitte geben Sie einen gueltigen Suchbegriff ein!"
+			ul.innerText = "Bitte geben Sie einen gültigen Suchbegriff ein!"
 		} else if (ul.innerHTML === "") {
 			ul.innerText = "Leider gibt es keine Suchergebnisse zu " + keyword + ".";
 		}
