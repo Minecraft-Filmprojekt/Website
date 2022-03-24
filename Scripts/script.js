@@ -1,5 +1,5 @@
 window.addEventListener('load',function load() {
-	alert("Diese Seite ist nicht fertig und wird durch eine neue ersetzt werden!");
+	alert("Diese Seite ist nicht fertig und wird komplett überarbeitet!");
 	//document.getElementById('scrollIndiFore').style.width = 450 + "px";
 //	document.getElementById('scrollIndiBack').style.width = document.getElementById('scrollDiv').clientWidth - 400 + "px";
 });
