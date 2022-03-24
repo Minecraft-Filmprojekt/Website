@@ -1,8 +1,4 @@
 window.addEventListener('load',function load() {
-	document.getElementById('Stream_SpielbaerLP').style.width = window.innerWidth * 0.7 + "px";
-	document.getElementById('Stream_SpielbaerLP').style.height = document.getElementById('Stream_SpielbaerLP').style.width.split("p")[0] / 620 * 378 + document.getElementById('SpielbaerLPchat_embed').style.borderWidth + "px";
-	document.getElementById('SpielbaerLPchat_embed').style.width = window.innerWidth - document.getElementById('Stream_SpielbaerLP').style.width.split("p")[0] - 120 + "px";
-	document.getElementById('SpielbaerLPchat_embed').style.height = document.getElementById('Stream_SpielbaerLP').style.height;
 	//document.getElementById('scrollIndiFore').style.width = 450 + "px";
 //	document.getElementById('scrollIndiBack').style.width = document.getElementById('scrollDiv').clientWidth - 400 + "px";
 });
