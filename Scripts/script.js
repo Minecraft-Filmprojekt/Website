@@ -1,4 +1,5 @@
 window.addEventListener('load',function load() {
+	alert("Diese Seite ist nicht fertig und wird durch eine neue ersetzt werden!");
 	//document.getElementById('scrollIndiFore').style.width = 450 + "px";
 //	document.getElementById('scrollIndiBack').style.width = document.getElementById('scrollDiv').clientWidth - 400 + "px";
 });
@@ -34,7 +35,7 @@ function checkScroll() {
 	toBottom.style.transition = "opacity 0.3s linear 0s";
 	//scrollIndiFore.style.transition = "height 0.2s linear 0s";
 	scrollIndiBack.style.transition = "height 0.2s linear 0s, width 0.1s linear 0s";
-//überschreibt sich das? \/ !!!
+//Ã¼berschreibt sich das? \/ !!!
 	
 //	scrollIndiFore.style.transition = "margin 0.2s linear 0s";
 //	scrollIndiBack.style.transition = "margin 0.2s linear 0s";
@@ -105,7 +106,7 @@ function search(e) {
 		}
 		
 		if(ul.innerHTML === "" && keyword === "" || keyword === " ") {
-			ul.innerText = "Bitte geben Sie einen gültigen Suchbegriff ein!"
+			ul.innerText = "Bitte geben Sie einen gÃ¼ltigen Suchbegriff ein!"
 		} else if (ul.innerHTML === "") {
 			ul.innerText = "Leider gibt es keine Suchergebnisse zu " + keyword + ".";
 		}
