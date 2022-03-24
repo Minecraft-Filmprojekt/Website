@@ -1,0 +1,236 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+}
+
+img {
+	width: auto;
+	height: 80px;
+}
+
+p {
+	background-color: #BBDE60;
+}
+
+.navBar {
+	background-color: #BBDE60 ;
+	position: fixed;
+	border-top-left-radius: 15px;
+	width: 100%;
+	display: table-cell;
+        vertical-align: middle;
+	top: 0;
+	left: 0;
+	display: inline-block;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.navBar p {
+	float: left;
+}
+.navBar img {
+	float: left;
+}
+
+.search {
+    	vertical-align: middle;
+    	height: 80px;
+	padding-right: 50px;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	float: right;
+	display: table-cell;
+}
+.search input {
+	height: 26px;
+	width: 200px;
+	border-radius: 5px;
+	outline: none;
+	border-color: gray;
+	border-style: solid;
+}
+#searchTrigger {
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	width: auto;
+	height: 20px;
+	font-size: 125%;
+	outline: none;
+	padding: 5px;
+	padding-top: 1px;
+	margin-right: 5px;
+	text-align: top;
+}
+
+#searchResList {
+	list-style-type: none;
+}
+.searchResItem {
+	background-color: #EEEEDD;
+	border-style: solid;
+	border-color: gray;
+	border-width: 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	cursor: pointer;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+.searchResItem:active {
+	cursor: default;
+}
+
+#toTop {
+	float: right;
+	position: fixed;
+	bottom: 0;
+	margin-left: 95%;
+	margin-bottom: 60px;
+	/*height: 20px;*/
+	width: 30px;
+	text-align: center;
+	padding: 2px;
+	padding-bottom: 2px;
+	opacity: 0%;
+	/*visibility: hidden;*/
+}
+#toBottom {
+	float: right;
+	position: fixed;
+	bottom: 0;
+	margin-left: 95%;
+	margin-bottom: 25px;
+	/*height: 20px;*/
+	width: 30px;
+	text-align: center;
+	padding: 2px;
+	padding-bottom: 2px;
+	opacity: 100%;
+	/*visibility: hidden;*/
+}
+
+/*auf Jimdo raus!!!*/.content {
+	z-index: -2;
+	position: absolute;
+}/*aud Jimdo raus!!!*/
+
+.blueButton {
+	border-style: solid;
+	border-color: #1c86ee;
+	border-width: 2.5px;
+	border-radius: 4px;
+	cursor: pointer;
+	text-decoration: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.disclaimer {
+    font-size: 11px;
+}
+
+.dropDown {
+	position: absolute;
+	width: 150px;
+	margin-top: 0;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	list-style-type: none;
+	padding-left: 0;
+
+}
+#dropDown1 {
+	margin-left: 200px;
+}
+#dropDown2 {
+	margin-left: 350px;
+}
+#dropDown3 {
+	margin-left: 500px;
+}
+.dropDownTitle {
+	height: 80px;
+	background-color: rgba(102, 204, 0, 0.75);
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.dropDownItem {
+	opacity: 0%;
+	display: none;
+	height: 30px;
+	background-color: lightgray;
+	border-style: solid;
+	border-width: 1px;
+	border: none;
+        border-top: solid;
+        box-shadow: rgba(0, 0, 0, 0.10) 0px 10px 20px, rgba(0, 0, 0, 0.15) 0px 6px 6px;
+}
+
+/* disabled
+#scrollIndiBack {
+	border-width: 1px;
+	background-color: red;
+	position: fixed;
+	width: 0px;
+	height: 60px;
+	border-style: solid;
+	border-color: none;
+	border-right: none;
+	margin-top: 0;
+	margin-left: 200px;
+}
+#scrollIndiFore {
+	position: fixed;
+	background-color: #96DE32;
+	width: 450px;
+	height: 60px;
+	border-style: solid;
+	border-color: none;
+	border-right: none;
+	border-width: 1px;
+	margin-top: 0;
+	margin-left: 200px;
+}*/
+
+
+/*!!!!! statt z-index anders anordnen? (sh. html) !!!!!*/
+
+#scrollIndiBack {
+	background-color: darkgreen;
+	position: fixed;
+	width: 0px;
+	height: 60px;
+	margin-top: 0;
+        left: 200px;
+        opacity: 50%;
+	z-index: -1;
+}
+/*#scrollIndiFore {
+        background-color: #96DE32
+	position: fixed;
+	width: 450px;
+	height: 60px;
+	margin-top: 0;
+        left: 200px;
+        opacity: 50%;
+	z-index: -1;
+}*/
