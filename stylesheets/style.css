@@ -85,6 +85,77 @@ body {
 	100% {opacity: 100%;}
 }
 
+#menuImg {
+	right: 0;
+	cursor: pointer;
+	pointer-events: none;
+	opacity: 0;
+}
+
 #menuCollapsed {
 
+}
+
+/* hm
+
+<input id="searchInput" onmouseover="slideOverlay(true, false)"  onmouseout="leaveTrue(); isFinishedTrue(); slideOverlay(false, false)" onfocusin="slideOverlay(true, false)" onfocusout="leaveTrue(); isFinishedTrue(); slideOverlay(false, false)" placeholder="Stichwort eingeben...">
+            <div id="overlappingDivInput" onmouseover="leaveFalse(); slideOverlay(true, true)" onmouseout="leaveTrue(); isFinishedTrue(); slideOverlay(false, true)" onclick="suchen();">
+                <p id="enterText">Suchen</p>
+            </div>
+
+#searchInput {
+    outline: none;
+    height: 30px;
+    font-size: 17px;
+    width: 144px;
+    padding: 0px;
+    position: absolute;
+    border-color: gray;
+    border-radius: 15px;
+    border-width: 0px;
+    padding-left: 31px;
+    padding-right: 5px;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+#overlappingDivInput {
+    height: 30px;
+    width: 30px;
+    background-color: #00c5e5;
+    pointer-events: none;
+    opacity: 100%;
+    border-color: transparent;
+    border-radius: 15px;
+    border-width: 0px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    margin-top: 5px;
+}
+#overlappingDivInput:hover {
+    background-color: #00b0e5;
+}
+
+#enterText {
+    color: black;
+    text-shadow: 0 0 4px white;
+    opacity: 0%;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+    user-select: none;
+}*/
+
+@media only screen and (max-width: 600px) {
+    #menuNoImg {
+		font-size: 0;
+        pointer-events: none;
+		width: calc(100% - 40px - 40px);
+	}
+	#menuImg {
+		opacity: 100%;
+		pointer-events: all;
+	}
 }
