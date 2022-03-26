@@ -71,7 +71,7 @@ body {
 	text-decoration-color: rgba(143, 126, 126, 0.438);
 	transition: all 0.5s ease;
 	animation: slideIn 1s forwards;
-	animation-delay: calc(var(--order) * 50ms);
+	animation-delay: calc(var(--order) * 100ms);
 	opacity: 0;
 }
 .menuItem:hover {
@@ -80,8 +80,8 @@ body {
 	text-decoration-thickness: 2px;
 }
 @keyframes slideIn {
-	from{transform: translateX(-50vw);}
-	to{transform: translateX(0);}
+	from{transform: perspective(200px) translate3d(-100vw, 0, -300px);}
+	to{transform: translate3d(0, 0, 0);}
 	100% {opacity: 100%;}
 }
 
