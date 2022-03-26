@@ -78,7 +78,7 @@ function validateInput(inp) {
             refreshLines(emptyPath + res);
         }
     } else if(inp.startsWith("cd ")) {
-        if(path == "C:") {
+        if(path == "C:" && inp != "cd ..") {
             switch(inp.split(" ")[1].toLowerCase()) {
                 case "about": case "about.html": case "über": case "über.html": case "übermich": case "übermich.html": case "über-mich": case "über-mich.html":
                     res = "cd about.html";
@@ -106,7 +106,7 @@ function validateInput(inp) {
         } else {
             res = "Leer"
         }
-        if(inp.split(" ")[1].toLowerCase() == "..") {
+        if(inp.split(" ")[1] == "..") {
             path = "C:";
             res = "cd ..";
         }
@@ -115,6 +115,15 @@ function validateInput(inp) {
         } else {
             refreshLines(pathBefore + "> " + res);
         }
+    } else if(inp == "cd") {
+        res = inp;
+        if(pathBefore == "C:") {
+            refreshLines(pathBefore + "\\> " + res);
+        } else {
+            refreshLines(pathBefore + "> " + res);
+        }
+        res = "Seite nicht gefunden";
+        refreshLines(emptyPath + res);
     } else if(inp.trim() == "") {
         if(path == "C:") {
             refreshLines(path + "\\> ");
