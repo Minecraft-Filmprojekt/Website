@@ -15,6 +15,10 @@
     src: url('../fonts/BeonMedium-7Z34.ttf');
 }
 
+:root {
+	--consoleBackground: rgb(19, 17, 17);
+}
+
 * {
 	margin: 0;
     padding: 0;
@@ -32,7 +36,8 @@ body {
 #section1 {
 	padding-top: 40px;
 	height: calc(100vh - 40px);
-	background-image: linear-gradient(to right bottom, rgb(255, 92, 228), rgb(62, 62, 190));
+	/*background-image: linear-gradient(to right bottom, rgb(255, 92, 228), rgb(62, 62, 190));*/
+	background-image: linear-gradient(to right bottom, #39ff14, black);
 }
 
 #menuTop {
@@ -100,14 +105,14 @@ body {
 }
 
 #console {
-	margin-top: 100px;
-	margin-left: 200px;
+	margin-top: calc(50vh - 40px);
+	margin-left: calc(50vw - 250px);
 	width: 500px;
-	background-color: rgb(19, 17, 17);
+	height: 33px;
+	background-color: var(--consoleBackground);
 	color: white;
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 25px;
-	border-radius: 5px;
 }
 
 #line0 {
@@ -117,12 +122,16 @@ body {
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 25px;
 	border: none;
-	background-color: rgb(19, 17, 17);
+	background-color: var(--consoleBackground);
 	outline: none;
 	caret-color: transparent;
 	color: white;
-	width: 100%;
-	border-radius: 5px;
+	width: calc(100%);
+	border-radius: 0 0 5px 0;
+}
+#line0 p {
+	background-color: var(--consoleBackground);
+	border-radius: 0 0 0 5px;
 }
 
 #barCaret {
@@ -184,6 +193,13 @@ body {
     margin: auto;
     user-select: none;
 }*/
+
+@media only screen and (max-width: 500px) {
+    #console {
+		width: 222px;
+		margin-left: calc(50vw - 111px);
+	}
+}
 
 @media only screen and (max-width: 740px) {
     #menuNoImg {
