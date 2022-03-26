@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'a Ape Mount';
+    src: url('../fonts/ApeMount-WyPM9.ttf');
+}
+@font-face {
+    font-family: 'a Abrushow';
+    src: url('../fonts/Abrushow-ALwDD.ttf');
+}
+@font-face {
+    font-family: 'Neoneon';
+    src: url('../fonts/Neoneon-3zaD6.otf');
+}
+@font-face {
+    font-family: 'Beon';
+    src: url('../fonts/BeonMedium-7Z34.ttf');
+}
+
+* {
+	margin: 0;
+    padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+}
+
+body {
+	font-size: 30px;
+}
+
+#section1 {
+	padding-top: 40px;
+	height: calc(100vh - 40px);
+	background-image: linear-gradient(to right bottom, rgb(255, 109, 231), rgb(50, 50, 192));
+}
+
+#menuTop {
+	position: fixed;
+	width: 100vw;
+	height: 40px;
+	font-family: "Beon";
+	text-shadow: 0 0 5px white;
+}
+#menuTop img {
+	float: left;
+	height: 40px;
+	width: 40px;
+}
+
+#menuNoImg {
+	float: left;
+	width: calc(100% - 40px);
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0.308), rgba(211, 211, 211, 0.0))
+}
+
+#menuContent {
+	float: left;
+	height: auto;
+	margin: 0 auto;
+}
+
+.menuItem {
+	float: left;
+	padding: 5px 10px;
+	user-select: none;
+	cursor: pointer;
+	text-decoration-color: rgba(143, 126, 126, 0.438);
+	transition: all 0.5s ease;
+	animation: slideIn 0.5s forwards;
+	animation-delay: calc(var(--order) * 50ms);
+	opacity: 0;
+}
+.menuItem:hover {
+	text-decoration: underline;
+	text-decoration-color: rgba(255, 255, 255, 0.26);
+	text-decoration-thickness: 2px;
+}
+@keyframes slideIn {
+	from{transform: translateY(-40px);}
+	to{transform: translateX(0);}
+	100% {opacity: 100%;}
+}
+
+#menuCollapsed {
+
+}
