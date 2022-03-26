@@ -6,6 +6,7 @@
 		
 		<link rel="stylesheet" href="stylesheets/style.css">
 		<script src="scripts/script.js"></script>
+        <script src="scripts/script-console.js"></script>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,16 +18,35 @@
             <img src="pictures/Satisfactory-Train.jpg" alt="JaskerX-ProfileImg">
             <div id="menuNoImg">
                 <div id="menuContent">
-                    <p class="menuItem" style="--order: 4">Über mich</p>
-                    <p class="menuItem" style="--order: 3">two</p>
-                    <p class="menuItem" style="--order: 2">three</p>
+                    <a href="about.html">
+                        <p class="menuItem" style="--order: 4">Über mich</p>
+                    </a>
+                    <a href="#">
+                    <p class="menuItem" style="--order: 3">Kenntnisse</p>
+                    </a>
+                    <a href="werbung.html">
+                    <p class="menuItem" style="--order: 2">Werbung</p>
+                    </a>
+                    <a href="kontakt.html">
                     <p class="menuItem" style="--order: 1">Kontakt</p>
+                    </a>
                 </div>
             </div>
             <img onclick="" id="menuImg" src="pictures/menu-open-icon.svg">
         </div>
         <section id="section1">
-
+            <div id="console">
+                <p id="line5"></p>
+                <p id="line4"></p>
+                <p id="line3"></p>
+                <p id="line2"></p>
+                <p id="line1"></p>
+                <div id="line0">
+                    <p>C:\> </p>
+                    <input type="text" onclick="doFocus()" onfocusout="noFocus()" onkeydown="keyPressed(event)">
+                </div>
+                <div id="barCaret"></div>
+            </div>
         </section>
     </body>
 </html>
