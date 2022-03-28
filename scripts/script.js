@@ -52,6 +52,10 @@ function leaveFalse() {
     leave = false;
 }
 
-function suchen() {
+function search(key) {
     
+}
+
+function scrollSec(num) {
+    document.getElementById("section" + num).scrollIntoView();
 }

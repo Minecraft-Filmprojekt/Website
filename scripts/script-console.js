@@ -81,9 +81,9 @@ function validateInput(inp) {
         if(path == "C:" && inp != "cd ..") {
             switch(inp.split(" ")[1].toLowerCase()) {
                 case "about": case "about.html": case "über": case "über.html": case "übermich": case "übermich.html": case "über-mich": case "über-mich.html":
-                    res = "cd about.html";
+                    res = "cd about";
                     path += "\\about";
-                    window.open("about.html", "_self")
+                    scrollSec("2");
                     break;
                 case "kentnisse": case "kentnisse.html": case "kenntnisse": case "kenntnisse.html": case "knowledge": case "knowledge.html":
                     res = "cd kenntnisse.html";
@@ -130,13 +130,47 @@ function validateInput(inp) {
         } else {
             refreshLines(path + "> ");
         }
-    } else {
+    } else if(inp.startsWith("find ")) {
+        res = inp;
         if(path == "C:") {
             refreshLines(path + "\\> " + res);
         } else {
             refreshLines(path + "> " + res);
         }
-        res = "Befehl nicht gefunden";
+        if(inp.split(" ")[1] != "") {
+            search(inp.slice(5));
+        } else {
+            res = "Ungültig";
+            refreshLines(emptyPath + res);
+        }
+    } else if(inp.startsWith("search ") || inp.toLowerCase().startsWith("suchen ")) {
+        res = inp;
+        if(path == "C:") {
+            refreshLines(path + "\\> " + res);
+        } else {
+            refreshLines(path + "> " + res);
+        }
+        if(inp.split(" ")[1] != "") {
+            search(inp.slice(7));
+        } else {
+            res = "Ungültig";
+            refreshLines(emptyPath + res);
+        }
+    } else if(inp.toLowerCase().startsWith("suche ")) {
+        res = inp;
+        if(path == "C:") {
+            refreshLines(path + "\\> " + res);
+        } else {
+            refreshLines(path + "> " + res);
+        }
+        if(inp.split(" ")[1] != "") {
+            search(inp.slice(6));
+        } else {
+            res = "Ungültig";
+            refreshLines(emptyPath + res);
+        }
+    } else {
+        res = "Befehl nicht gefundenrgrrhrhrhrhr";
         refreshLines(emptyPath + res);
     }
 }
