@@ -15,7 +15,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
-function addData() {
+document.getElementById("btn").onclick = function () {
+    alert("yes");
     var users = [];
 
     const querySnapshot = await getDocs(collection(db, "users"));
