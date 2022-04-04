@@ -13,7 +13,7 @@
         <title>Website von JaskerX</title>
     </head>
 
-    <body>
+    <body onclick="bodyClicked(event)">
         <div id="menuTop">
             <img src="pictures/Satisfactory-Train.jpg" alt="JaskerX-ProfileImg">
             <div id="menuNoImg">
@@ -33,15 +33,23 @@
             </div>
             <img onclick="" id="menuImg" src="pictures/menu-open-icon.svg">
         </div>
+        <div id="nav">
+            <img src="pictures/icon_upward-top.svg" onclick="scrollSec(1)">
+            <div id="navSteps">
+                <img src="pictures/icon_upward.svg" onclick="scrollOneSecUp()">
+                <img src="pictures/icon_downward.svg" onclick="scrollOneSecDown()">
+            </div>
+            <img src="pictures/icon_downward-bottom.svg" onclick="scrollSec(3)">
+        </div>
         <section id="section1">
             <div id="console">
-                <p id="line5"></p>
-                <p id="line4"></p>
-                <p id="line3"></p>
-                <p id="line2"></p>
-                <p id="line1"></p>
-                <div id="line0">
-                    <p>C:\> </p>
+                <p id="line5" style="display: none;">s</p>
+                <p id="line4" style="display: none;">s</p>
+                <p id="line3" style="display: none;">s</p>
+                <p id="line2" style="display: none;">s</p>
+                <p id="line1" style="display: none;">s</p>
+                <div id="line0" onclick="expandConsole()">
+                    <p>> </p>
                     <input type="text" onclick="doFocus()" onfocusout="noFocus()" onkeydown="keyPressed(event)">
                 </div>
                 <div id="barCaret"></div>
