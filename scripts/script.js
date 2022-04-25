@@ -1,5 +1,7 @@
 var isFinished = true;
 var leave = false;
+var doShowChooser = true;
+var choseConsole = false;
 
 function slideOverlay(off, isOverlay) {
     var div = document.getElementById("overlappingDivInput");
@@ -78,6 +80,7 @@ function scrollOneSecDown() {
 }
 
 function expandConsole() {
+    showChooser(false);
     var console = document.getElementById("console");
     var line0div = document.getElementById("line0");
     var line1 = document.getElementById("line1");
@@ -152,7 +155,47 @@ function makeConsoleTextVisible() {
 }
 
 function bodyClicked(e) {
-    if(e.target.parentElement.id != "line0") {
+    if(e.target.parentElement.id != "line0" && e.target.id != "chooseConsole" && e.target.parentElement.id != "chooseConsole" && e.target.id != "chooseSearch" && e.target.parentElement.id != "chooseSearch") {
         collapseConsole();
+    }
+}
+
+function showChooser(show) {
+    
+    var cConsole = document.getElementById("chooseConsole");
+    var cSearch = document.getElementById("chooseSearch");
+
+    if(show) {
+
+        if(doShowChooser) {
+            cConsole.style.zIndex = 0;
+            cSearch.style.zIndex = 0;
+            cConsole.classList.add("animChoose");
+            cSearch.classList.add("animChoose");
+
+            doShowChooser = false;
+        }
+    } else {
+        cConsole.style.zIndex = -1;
+        cSearch.style.zIndex = -1;
+    }
+}
+
+function expandInp() {
+
+    if(choseConsole) {
+        expandConsole();
+    } else {
+        expandSearch();
+    }
+}
+
+function expandSearch() {
+    showChooser(false);
+    var console = document.getElementById("console");
+
+    if(window.innerWidth > 400) {
+        console.style.width = "40%";
+        console.style.marginLeft = "calc(50vw - 20%)";
     }
 }

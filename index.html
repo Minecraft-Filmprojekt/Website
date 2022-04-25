@@ -42,17 +42,25 @@
             <img src="pictures/icon_downward-bottom.svg" onclick="scrollSec(3)">
         </div>
         <section id="section1">
-            <div id="console">
+            <div id="console" onmouseover="showChooser(true)">
                 <p id="line5" style="display: none;">s</p>
                 <p id="line4" style="display: none;">s</p>
                 <p id="line3" style="display: none;">s</p>
                 <p id="line2" style="display: none;">s</p>
                 <p id="line1" style="display: none;">s</p>
-                <div id="line0" onclick="expandConsole()">
+                <div id="line0" onclick="expandInp()">
                     <p>> </p>
                     <input type="text" onclick="doFocus()" onfocusout="noFocus()" onkeydown="keyPressed(event)">
                 </div>
                 <div id="barCaret"></div>
+            </div>
+            <div id="chooser">
+                <div id="chooseConsole" onmouseover="showChooser(true); choseConsole = true;" onclick="expandConsole()">
+                    <p class="chooseP">Konsole</p>
+                </div>
+                <div id="chooseSearch" onmouseout="showChooser(true); choseConsole = false;" onclick="expandSearch()">
+                    <p class="chooseP">Suche</p>
+                </div>
             </div>
         </section>
         <section id="section2">
