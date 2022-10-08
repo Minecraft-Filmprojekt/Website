@@ -5,7 +5,7 @@ var color_offline_text = "#ca2121";
 var color_offline_back = "#f17a7a";
 var color_offline_border = "#ad1313";
 
-window.addEventListener('load', function load() {
+window.addEventListener('load', function() {
     var container = document.getElementById("container-status");
     var text_status = document.getElementById("text_status");
     var text_version = document.getElementById("text_status_version");
@@ -33,3 +33,9 @@ window.addEventListener('load', function load() {
             container.style.opacity = 1;
         });
 });
+
+
+
+function scrollSec(sec) {
+    document.getElementById("section" + sec).scrollIntoView();
+}

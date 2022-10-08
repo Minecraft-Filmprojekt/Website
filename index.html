@@ -13,39 +13,74 @@
     </head>
 
     <body>
+        <img src="pictures/scrolluparrow.png" id="scrollUp" onclick="scrollSec(1)">
         <section id="section1">
-            <p>Willkommen beim</p>
-            <img id="welcome_logo" src="pictures/logo-mcfp-round.png">
-            <img id="welcome_arrow" src="pictures/scrolldownarrow.png">
+            <div class="container-content">
+                <div style="display: relative;">
+                    <p>Willkommen beim</p>
+                    <img id="welcome_logo" src="pictures/logo-mcfp-round.png">
+                    <img id="welcome_arrow" src="pictures/scrolldownarrow.png" onclick="scrollSec(2)">
+                </div>
+            </div>
+            <img src="pictures/divider_bottom.png" class="divider-bottom">
         </section>
         <section id="section2">
-            <div class="container-left">
-                <div class="container-half-top">
-                    <div id="container-status">
-                        <b><p style="width: 100%; text-align: center;">Status des Minecraft Servers</p>
-                        <p id="text_status"></p></b>
-                        <p id="text_status_version"></p>
-                        <p id="text_status_player"></p>
+            <img src="pictures/divider_top.png" class="divider-top">
+            <div class="container-content">
+                <div class="container-left">
+                    <div class="container-half-top">
+                        <div id="container-status">
+                            <b><p style="width: 100%; text-align: center;">Status des Minecraft Servers</p>
+                            <p id="text_status"></p></b>
+                            <p id="text_status_version"></p>
+                            <p id="text_status_player"></p>
+                        </div>
+                    </div>
+                    <div class="container-half-bottom">
+                        <div  style="padding-top: 50px;">
+                            <p style="color: white; text-align: center;">Hey,<br>du interessierst dich<br>für unser Projekt?</p>
+                            <p style="color: rgb(209, 209, 209); text-align: center; margin-top: 25px; font-size: 25px;" class="link" onclick="scrollSec(3)">Klicke hier, um<br>mehr zu erfahren!</p>
+                        </div>
                     </div>
                 </div>
-                <div class="container-half-bottom">
-                    <div style="margin: 5px;">
-                        <p style="color: white; margin-bottom: 15px; text-align: center;">Hey, du interessierst dich<br>für unser Projekt?</p>
-                        <p style="color: #00c5e5; text-align: center; cursor: pointer;">Dann bewirb dich hier<br>oder erfahre mehr!</p>
-                    </div>
+                <div class="container-right">
+                    <iframe src="https://discord.com/widget?id=949642462345973831&theme=dark" width="90%" height="80%" style="max-width: 350px; max-height: 700px; box-shadow: 10px 10px 5px #2c2c2c;" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
                 </div>
             </div>
-            <div class="container-right">
-                <iframe src="https://discord.com/widget?id=949642462345973831&theme=dark" width="90%" height="80%" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-            </div>
+            <img src="pictures/divider_bottom.png" class="divider-bottom">
         </section>
         <section id="section3">
-            <div class="container-left">
+            <img src="pictures/divider_top.png" class="divider-top">
+            <div class="container-content">
+                <div class="container-left">
                 
+                </div>
+                <div class="container-right">
+    
+                </div>
             </div>
-            <div class="container-right">
-
+            <img src="pictures/divider_bottom.png" class="divider-bottom">
+        </section>
+        <section id="section4">
+            <img src="pictures/divider_top.png" class="divider-top">
+            <div class="container-content" style="display: flex; flex-wrap: wrap;">
+                <b style="width: 100%; color: white;"><p>Unsere Partner</p></b>
+                <div id="partners">
+                    <div class="partnerLogo" onmouseover="partnerHover(0)">
+                        <img src="pictures/ViaVoRtexLogo.png" title="Unser Partner ViaVoRtex">
+                    </div>
+                    <div class="partnerLogo" onmouseover="partnerHover(1)">
+                        <a href="https://danatur.tv"><img src="pictures/DanaturLogo.svg" title="Unsere Partnerin Danatur"></a>
+                    </div>
+                    <div class="partnerLogo" onmouseover="partnerHover(2)">
+                        <a href="https://www.twitch.tv/lucblauhd"><img src="pictures/LucblauLogo.png" title="Unser Partner Lucblau"></a>
+                    </div>
+                    <div class="partnerLogo" onmouseover="partnerHover(3)">
+                        <a href="https://www.endelon-hosting.de"><img src="pictures/EndelonLogo.svg" title="Unser Partner EndelonHosting"></a>
+                    </div>
+                </div>
             </div>
+            <img src="pictures/divider_bottom.png" class="divider-bottom">
         </section>
     </body>
 </html>
